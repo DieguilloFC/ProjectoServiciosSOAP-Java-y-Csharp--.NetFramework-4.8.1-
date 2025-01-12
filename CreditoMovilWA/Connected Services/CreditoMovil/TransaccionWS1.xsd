@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://services.creditomovil.pucp.edu.pe" targetNamespace="https://services.creditomovil.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="eliminarTransaccion" type="tns:eliminarTransaccion" />
+  <xs:element name="eliminarTransaccionResponse" type="tns:eliminarTransaccionResponse" />
+  <xs:element name="generarBuffer" type="tns:generarBuffer" />
+  <xs:element name="generarBufferResponse" type="tns:generarBufferResponse" />
+  <xs:element name="insertarTransaccion" type="tns:insertarTransaccion" />
+  <xs:element name="insertarTransaccionResponse" type="tns:insertarTransaccionResponse" />
+  <xs:element name="listarTodosTransaccions" type="tns:listarTodosTransaccions" />
+  <xs:element name="listarTodosTransaccionsResponse" type="tns:listarTodosTransaccionsResponse" />
+  <xs:element name="listarTransaccionCredito" type="tns:listarTransaccionCredito" />
+  <xs:element name="listarTransaccionCreditoResponse" type="tns:listarTransaccionCreditoResponse" />
+  <xs:element name="modificarTransaccion" type="tns:modificarTransaccion" />
+  <xs:element name="modificarTransaccionResponse" type="tns:modificarTransaccionResponse" />
+  <xs:element name="obtenerPorIDTransaccion" type="tns:obtenerPorIDTransaccion" />
+  <xs:element name="obtenerPorIDTransaccionResponse" type="tns:obtenerPorIDTransaccionResponse" />
+  <xs:element name="reporteTransaccionClientePDF" type="tns:reporteTransaccionClientePDF" />
+  <xs:element name="reporteTransaccionClientePDFResponse" type="tns:reporteTransaccionClientePDFResponse" />
+  <xs:complexType name="listarTransaccionCredito">
+    <xs:sequence>
+      <xs:element name="idCred" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTransaccionCreditoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:transaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="agencia" type="xs:string" />
+      <xs:element name="anulado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="concepto" type="xs:string" />
+      <xs:element minOccurs="0" name="credito" type="tns:credito" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="metodoPago" type="tns:metodoPago" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element name="numOperacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="credito">
+    <xs:sequence>
+      <xs:element name="cancelado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaOtorgamiento" type="xs:dateTime" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="motivo" type="xs:string" />
+      <xs:element name="numCredito" type="xs:int" />
+      <xs:element name="numCuotas" type="xs:int" />
+      <xs:element name="tasaInteres" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="metodoPago" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idMetodoPago" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreTitular" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteTransaccionClientePDF">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteTransaccionClientePDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTransaccion">
+    <xs:sequence>
+      <xs:element name="idtransaccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTransaccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosTransaccions">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosTransaccionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:transaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTransaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="transaccion" type="tns:transaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTransaccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarBuffer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string" />
+                  <xs:element minOccurs="0" name="value" type="xs:anyType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarBufferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTransaccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="transaccion" type="tns:transaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTransaccionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIDTransaccion">
+    <xs:sequence>
+      <xs:element name="idtransaccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIDTransaccionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:transaccion" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

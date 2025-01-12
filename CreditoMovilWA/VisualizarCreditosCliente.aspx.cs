@@ -163,7 +163,7 @@ namespace CreditoMovilWA
                 }
 
                 trans.fecha = DateTime.Now;
-                trans.foto = (byte[])Session["ImagenPago"];
+                trans.metodoPago.foto = (byte[])Session["ImagenPago"];
                 trans.concepto = "Pago de Crédito";
                 trans.monto = 123; // FALTA EL MONTO
                 trans.anulado = false;

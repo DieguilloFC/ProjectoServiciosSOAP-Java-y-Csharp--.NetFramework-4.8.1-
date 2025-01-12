@@ -1,0 +1,24 @@
+-----------Usuarios-----------
+***********Clientes***********
+ID-------------Contraseña-----
+70767478        yapoii
+70717375        bonsai7778
+75510375        carlospoii
+64230202        vkincinerator
+79152230        gdpcordi4444
+74556130        elpibemotiva
+84652617        puffleRojo666  
+
+*********Supervisores*********
+ID-------------Contraseña-----
+20455817       knapsackLover
+78954265       yapoii
+78962134       carabayork123
+
+************Admins************
+71396875       facil123
+
+IP 34.237.213.134
+
+REFERENCIA DE SERVICIO: http://34.237.213.134:8080/CreditoMovilWSBL/archivo.disco
+ssh -i "credito_movil_clave.pem" ubuntu@34.237.213.134

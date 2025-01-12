@@ -46,9 +46,9 @@ namespace CreditoMovilWA
             txtIdTransaccion.Text = trans.numOperacion.ToString();
             txtFechaTransaccion.Text = trans.fecha.ToString();
             txtMonto.Text = trans.monto.ToString();
-            if (trans.foto != null)
+            if (trans.metodoPago.foto != null)
             {
-                string base64String = Convert.ToBase64String(trans.foto);
+                string base64String = Convert.ToBase64String(trans.metodoPago.foto);
                 string imageUrl = "data:image/jpeg;base64," + base64String;
                 imgTransaccion.ImageUrl = imageUrl;
             }

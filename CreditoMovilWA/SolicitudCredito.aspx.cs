@@ -48,7 +48,6 @@ namespace CreditoMovilWA
                 return;
             }
             credito cred = new credito();
-            cred.cliente = null; //falta guardar al cliente btw, eso se hace desde el login
             cred.estado = "Pendiente";//importante
             cred.tasaInteres = maxInteres;//importante
             cred.fechaOtorgamiento = DateTime.Now;//importante

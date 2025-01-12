@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="c595cab9-5d6c-4464-b6b3-769f4910e27e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/CreditoMovilWSBL/archivo.disco" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdministradorWS1.xsd" MetadataType="Schema" ID="78006d9d-17b4-4cbb-a97b-19715f362a11" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/AdministradorWS?xsd=1" />
+    <MetadataFile FileName="BancoWS1.xsd" MetadataType="Schema" ID="736b1290-8cfd-42d4-a050-10e50249eeac" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/BancoWS?xsd=1" />
+    <MetadataFile FileName="CreditoWS1.wsdl" MetadataType="Wsdl" ID="e7028091-7241-4689-95ab-7223c8d8a892" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/CreditoWS?WSDL" />
+    <MetadataFile FileName="EvaluacionWS1.xsd" MetadataType="Schema" ID="90183dd6-ae41-40de-b763-b9b987035292" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/EvaluacionWS?xsd=1" />
+    <MetadataFile FileName="BilleteraWS1.wsdl" MetadataType="Wsdl" ID="9dc3f39d-b17b-46c0-9ae3-8e3f87da75f9" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/BilleteraWS?WSDL" />
+    <MetadataFile FileName="AdministradorWS1.wsdl" MetadataType="Wsdl" ID="0f035bc5-a343-43de-9575-5b419be99e6d" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/AdministradorWS?WSDL" />
+    <MetadataFile FileName="BilleteraWS1.xsd" MetadataType="Schema" ID="7a5dfbdc-a673-4eca-9ca6-abee3eee9261" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/BilleteraWS?xsd=1" />
+    <MetadataFile FileName="TransaccionWS1.wsdl" MetadataType="Wsdl" ID="5c62a71f-17f2-4e48-849c-b9e56b100c37" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/TransaccionWS?WSDL" />
+    <MetadataFile FileName="ClienteWS1.wsdl" MetadataType="Wsdl" ID="6165a7d6-cc47-4b4b-8378-290998088c4d" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/ClienteWS?WSDL" />
+    <MetadataFile FileName="BancoWS1.wsdl" MetadataType="Wsdl" ID="cc8a092e-41d4-41eb-9537-9783d24ad351" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/BancoWS?WSDL" />
+    <MetadataFile FileName="ClienteWS1.xsd" MetadataType="Schema" ID="d9f4b508-956a-4415-aba3-784b27ad0852" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/ClienteWS?xsd=1" />
+    <MetadataFile FileName="archivo1.disco" MetadataType="Disco" ID="4935a0dc-d230-4aeb-8e1b-57bbfe6e1d39" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/archivo.disco" />
+    <MetadataFile FileName="SupervisorWS1.xsd" MetadataType="Schema" ID="f0835b81-021d-445f-a5b3-22fa23c665d1" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/SupervisorWS?xsd=1" />
+    <MetadataFile FileName="CreditoWS1.xsd" MetadataType="Schema" ID="9fc14c27-ae26-4e3d-b6dc-c0667bd14425" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/CreditoWS?xsd=1" />
+    <MetadataFile FileName="TransaccionWS1.xsd" MetadataType="Schema" ID="7c2d301b-319c-4e6c-9bac-6695ee7a5f80" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/TransaccionWS?xsd=1" />
+    <MetadataFile FileName="SupervisorWS1.wsdl" MetadataType="Wsdl" ID="795ebfc2-f695-46f9-828d-24a9fb646fda" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/SupervisorWS?WSDL" />
+    <MetadataFile FileName="EvaluacionWS1.wsdl" MetadataType="Wsdl" ID="fc47a4d2-84cc-4436-8fe3-76ffbb269537" SourceId="1" SourceUrl="http://localhost:8080/CreditoMovilWSBL/EvaluacionWS?WSDL" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

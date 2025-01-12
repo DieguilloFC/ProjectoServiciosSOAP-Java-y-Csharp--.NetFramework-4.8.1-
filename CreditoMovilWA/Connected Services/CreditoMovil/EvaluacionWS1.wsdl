@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://services.creditomovil.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="EvaluacionWS" targetNamespace="https://services.creditomovil.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/CreditoMovilWSBL/EvaluacionWS?xsd=1" namespace="https://services.creditomovil.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="insertarEvaluacion">
+    <part name="parameters" element="tns:insertarEvaluacion" />
+  </message>
+  <message name="insertarEvaluacionResponse">
+    <part name="parameters" element="tns:insertarEvaluacionResponse" />
+  </message>
+  <message name="eliminarEvaluacion">
+    <part name="parameters" element="tns:eliminarEvaluacion" />
+  </message>
+  <message name="eliminarEvaluacionResponse">
+    <part name="parameters" element="tns:eliminarEvaluacionResponse" />
+  </message>
+  <message name="obtenerPorNumEvaluacion">
+    <part name="parameters" element="tns:obtenerPorNumEvaluacion" />
+  </message>
+  <message name="obtenerPorNumEvaluacionResponse">
+    <part name="parameters" element="tns:obtenerPorNumEvaluacionResponse" />
+  </message>
+  <message name="modificarEvaluacion">
+    <part name="parameters" element="tns:modificarEvaluacion" />
+  </message>
+  <message name="modificarEvaluacionResponse">
+    <part name="parameters" element="tns:modificarEvaluacionResponse" />
+  </message>
+  <message name="listarTodosPorSupervisor">
+    <part name="parameters" element="tns:listarTodosPorSupervisor" />
+  </message>
+  <message name="listarTodosPorSupervisorResponse">
+    <part name="parameters" element="tns:listarTodosPorSupervisorResponse" />
+  </message>
+  <message name="listarPendientesPorSupervisor">
+    <part name="parameters" element="tns:listarPendientesPorSupervisor" />
+  </message>
+  <message name="listarPendientesPorSupervisorResponse">
+    <part name="parameters" element="tns:listarPendientesPorSupervisorResponse" />
+  </message>
+  <message name="listarRealizadosPorSupervisor">
+    <part name="parameters" element="tns:listarRealizadosPorSupervisor" />
+  </message>
+  <message name="listarRealizadosPorSupervisorResponse">
+    <part name="parameters" element="tns:listarRealizadosPorSupervisorResponse" />
+  </message>
+  <portType name="EvaluacionWS">
+    <operation name="insertarEvaluacion">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionRequest" message="tns:insertarEvaluacion" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/insertarEvaluacionResponse" message="tns:insertarEvaluacionResponse" />
+    </operation>
+    <operation name="eliminarEvaluacion">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionRequest" message="tns:eliminarEvaluacion" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/eliminarEvaluacionResponse" message="tns:eliminarEvaluacionResponse" />
+    </operation>
+    <operation name="obtenerPorNumEvaluacion">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorNumEvaluacionRequest" message="tns:obtenerPorNumEvaluacion" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/obtenerPorNumEvaluacionResponse" message="tns:obtenerPorNumEvaluacionResponse" />
+    </operation>
+    <operation name="modificarEvaluacion">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionRequest" message="tns:modificarEvaluacion" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/modificarEvaluacionResponse" message="tns:modificarEvaluacionResponse" />
+    </operation>
+    <operation name="listarTodosPorSupervisor">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosPorSupervisorRequest" message="tns:listarTodosPorSupervisor" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarTodosPorSupervisorResponse" message="tns:listarTodosPorSupervisorResponse" />
+    </operation>
+    <operation name="listarPendientesPorSupervisor">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarPendientesPorSupervisorRequest" message="tns:listarPendientesPorSupervisor" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarPendientesPorSupervisorResponse" message="tns:listarPendientesPorSupervisorResponse" />
+    </operation>
+    <operation name="listarRealizadosPorSupervisor">
+      <input wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarRealizadosPorSupervisorRequest" message="tns:listarRealizadosPorSupervisor" />
+      <output wsam:Action="https://services.creditomovil.pucp.edu.pe/EvaluacionWS/listarRealizadosPorSupervisorResponse" message="tns:listarRealizadosPorSupervisorResponse" />
+    </operation>
+  </portType>
+  <binding name="EvaluacionWSPortBinding" type="tns:EvaluacionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorNumEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosPorSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPendientesPorSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarRealizadosPorSupervisor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EvaluacionWS">
+    <port name="EvaluacionWSPort" binding="tns:EvaluacionWSPortBinding">
+      <soap:address location="http://localhost:8080/CreditoMovilWSBL/EvaluacionWS" />
+    </port>
+  </service>
+</definitions>

@@ -34,7 +34,7 @@ namespace CreditoMovilWA
 
         protected void btnGenerarReportes_Click(object sender, EventArgs e)
         {
-            Byte[] FileBuffer = clienteDAO.reportePDF();
+            Byte[] FileBuffer = clienteDAO.reporteClienteCreditoPDF();
             if (FileBuffer != null)
             {
                 Response.ContentType = "application/pdf";
