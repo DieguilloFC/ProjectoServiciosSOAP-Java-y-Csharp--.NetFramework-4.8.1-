@@ -1,0 +1,455 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3301FE0-2CF8-4D30-A344-FBEA6B765887}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CreditoMovilWA</RootNamespace>
+    <AssemblyName>CreditoMovilWA</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44333</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminAddMetodoPago.aspx" />
+    <None Include="Connected Services\CreditoMovil\archivo.disco" />
+    <None Include="Connected Services\CreditoMovil\configuration91.svcinfo" />
+    <None Include="Connected Services\CreditoMovil\configuration.svcinfo" />
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.banco.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.billetera.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.credito.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.eliminarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.insertarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarCreditosClientePorFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarCreditosPendXClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarPendientesPorSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarRealizadosPorSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosBancosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosBilleterasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosCreditosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosPorSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.listarTodosSupervisorsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.modificarSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenAdminResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorDocIdenSupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorIDSupervisorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorNombreBancoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorNombreBilleteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.obtenerPorNumEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CreditoMovil\CreditoMovilWA.CreditoMovil.supervisor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CreditoMovil\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="DatosEvaluacionCliente.aspx" />
+    <Content Include="DetalleCliente.aspx" />
+    <Content Include="DetalleCredito.aspx" />
+    <Content Include="DetalleEvaluacion.aspx" />
+    <Content Include="DetalleTransaccion.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\bancos.png" />
+    <Content Include="images\billeteras.png" />
+    <Content Include="images\QR.png" />
+    <Content Include="ListaSupervisoresAsignar.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MainAdmin.aspx" />
+    <Content Include="MainCliente.aspx" />
+    <Content Include="MainSupervisor.aspx" />
+    <Content Include="ModificarDatosCliente.aspx" />
+    <Content Include="Registro.aspx" />
+    <Content Include="SolicitudCredito.aspx" />
+    <Content Include="VisualizarCreditosCliente.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAddMetodoPago.aspx.cs">
+      <DependentUpon>AdminAddMetodoPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddMetodoPago.aspx.designer.cs">
+      <DependentUpon>AdminAddMetodoPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CreditoMovil\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEvaluacionCliente.aspx.cs">
+      <DependentUpon>DatosEvaluacionCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosEvaluacionCliente.aspx.designer.cs">
+      <DependentUpon>DatosEvaluacionCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleCliente.aspx.cs">
+      <DependentUpon>DetalleCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleCliente.aspx.designer.cs">
+      <DependentUpon>DetalleCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleCredito.aspx.cs">
+      <DependentUpon>DetalleCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleCredito.aspx.designer.cs">
+      <DependentUpon>DetalleCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleEvaluacion.aspx.cs">
+      <DependentUpon>DetalleEvaluacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleEvaluacion.aspx.designer.cs">
+      <DependentUpon>DetalleEvaluacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleTransaccion.aspx.cs">
+      <DependentUpon>DetalleTransaccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleTransaccion.aspx.designer.cs">
+      <DependentUpon>DetalleTransaccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaSupervisoresAsignar.aspx.cs">
+      <DependentUpon>ListaSupervisoresAsignar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaSupervisoresAsignar.aspx.designer.cs">
+      <DependentUpon>ListaSupervisoresAsignar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainAdmin.aspx.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainAdmin.aspx.designer.cs">
+      <DependentUpon>MainAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainCliente.aspx.cs">
+      <DependentUpon>MainCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainCliente.aspx.designer.cs">
+      <DependentUpon>MainCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainSupervisor.aspx.cs">
+      <DependentUpon>MainSupervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainSupervisor.aspx.designer.cs">
+      <DependentUpon>MainSupervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarDatosCliente.aspx.cs">
+      <DependentUpon>ModificarDatosCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarDatosCliente.aspx.designer.cs">
+      <DependentUpon>ModificarDatosCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudCredito.aspx.cs">
+      <DependentUpon>SolicitudCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SolicitudCredito.aspx.designer.cs">
+      <DependentUpon>SolicitudCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.master.cs">
+      <DependentUpon>Usuario.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario.master.designer.cs">
+      <DependentUpon>Usuario.master</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarCreditosCliente.aspx.cs">
+      <DependentUpon>VisualizarCreditosCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisualizarCreditosCliente.aspx.designer.cs">
+      <DependentUpon>VisualizarCreditosCliente.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\MostrarImagen.ashx" />
+    <None Include="Connected Services\CreditoMovil\AdministradorWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\AdministradorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\BancoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\BancoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\BilleteraWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\BilleteraWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\ClienteWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\CreditoWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\CreditoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\EvaluacionWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\EvaluacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\SupervisorWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\SupervisorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditoMovil\TransaccionWS.wsdl" />
+    <None Include="Connected Services\CreditoMovil\TransaccionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Usuario.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CreditoMovil\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51370</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44333/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

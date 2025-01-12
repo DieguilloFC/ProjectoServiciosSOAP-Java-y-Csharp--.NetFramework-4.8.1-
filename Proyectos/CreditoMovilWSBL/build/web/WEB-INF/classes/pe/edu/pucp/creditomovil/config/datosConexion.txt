@@ -1,0 +1,5 @@
+hostname=db-creditomovil.cdyeweu6uoja.us-east-1.rds.amazonaws.com
+user=admin
+password=creditomovil20242
+port=3306
+database=dbcreditomovil
